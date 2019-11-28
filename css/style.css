@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  font-family: 'Marvel', sans-serif;
+}
+
+.game {
+  background-image: url('https://blog.umhb.edu/wp-content/uploads/2019/06/mcu-1920x1080.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.grid {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.match {
+
+  background-image: none !important;
+}
+
+.card {
+  position: relative;
+  transition: all 0.4s linear;
+  transform-style: preserve-3d;
+  margin: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.card,
+.back,
+.front {
+  height: 150px;
+  width: 150px;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-image: url('https://www.n3rdabl3.com/wp-content/images/uploads/2014/03/Marvel-Logo.jpg');
+  background-repeat: no-repeat; 
+  background-position: center center; 
+  background-size: contain;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.selected {
+  transform: rotateY(180deg);   
+}
+
+.match .front {
+  background-image: none !important;
+}
+
+.noFlipsAgain{
+    background-image: none;
+}
