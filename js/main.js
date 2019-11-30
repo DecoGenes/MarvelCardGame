@@ -83,6 +83,15 @@ function levelSelection() {
         })
         grid.setAttribute('class', 'gridEndGame');
         game.appendChild(grid);
+    } else {
+        for (var i = 0; i < 6; i++) {
+            gameGrid.push(cardsArray[i])
+        }
+        gameGridLevel = gameGrid.concat(gameGrid).sort(function () {
+            return 0.5 - Math.random();
+        })
+        grid.setAttribute('class', 'gridEasy');
+        game.appendChild(grid);
     }
 }
 
@@ -242,6 +251,10 @@ function modalWin() {
         }
     } else if (document.getElementById('endGame').checked == true) {
         if (counter === 12) {
+            modal.style.display = "block";
+        }
+    } else {
+        if (counter === 6) {
             modal.style.display = "block";
         }
     }
