@@ -1,28 +1,101 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
 }
 
 body {
-  margin:0;
+  margin: 0;
   font-family: 'Marvel', sans-serif;
-  background-image: url('https://blog.umhb.edu/wp-content/uploads/2019/06/mcu-1920x1080.jpg'); 
+  background-image: url('https://cdn.guidingtech.com/imager/media/assets/187275/thumb-1920-859672_935adec67b324b146ff212ec4c69054f.png?1533292770');
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+.firstPage {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('https://i.gifer.com/XsZS.gif');
+  background-size: contain;
+  background-position: center;
+}
+
+.hidePage {
+  display: none;
+}
+
+.selectLevel {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: crimson;
+  color: whitesmoke;
+  opacity: 0.9;
+  font-size: 20px;
 }
 
 .game {
-   
   height: 100vh;
 }
 
 .header {
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
-.grid {
-  max-width: 960px;
+.header-name {
+  color: white;
+  text-shadow: 2px 2px crimson;
+  font-size: -webkit-xxx-large;
+}
+
+#missesTitle{
+  color: white;
+  text-shadow: 2px 2px crimson;
+  font-size: large;
+  background-color: crimson;
+  opacity: 0.8;
+}
+
+#missesTotalText{
+  color: white;
+  text-shadow: 2px 2px crimson;
+  font-size: large;
+}
+
+.newGameBtn {
+  width: 100px;
+  height: 40px;
+  background-color: whitesmoke;
+  font-family: 'marvel';
+  font-size: larger;
+  color: crimson;
+  font-weight: bold;
+  border: 2px solid crimson;
+}
+
+.gridEasy {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.gridMedium {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.gridEndGame {
+  max-width: 1500px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -30,7 +103,6 @@ body {
 }
 
 .match {
-
   background-image: none !important;
 }
 
@@ -47,8 +119,8 @@ body {
 .card,
 .back,
 .front {
-  height: 150px;
-  width: 150px;
+  height: 135px;
+  width: 135px;
 }
 
 .back,
@@ -59,8 +131,8 @@ body {
 
 .front {
   background-image: url('https://www.n3rdabl3.com/wp-content/images/uploads/2014/03/Marvel-Logo.jpg');
-  background-repeat: no-repeat; 
-  background-position: center center; 
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: contain;
 }
 
@@ -69,40 +141,45 @@ body {
 }
 
 .selected {
-  transform: rotateY(180deg);   
+  transform: rotateY(180deg);
 }
 
 .match .front {
   background-image: none !important;
 }
 
-.noFlipsAgain{
-    background-image: none;
+.noFlipsAgain {
+  background-image: none;
 }
-
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
-
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  background-image: url('https://media.giphy.com/media/kkYbDLFmNvO4E/giphy.gif');
+  margin: 15% 32%;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 50%;
+  height: 45%;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
+.modalText {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
 
 .close {
   color: #aaa;

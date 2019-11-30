@@ -13,20 +13,39 @@
 </head>
 
 <body>
-  <div class="game">
+  <div class="firstPage" id="firstPage">
     <div class="header">
-      <h1>Memory Game!</h1>
+      <h1 class="header-name">Avengers Memory Game!</h1>
+    </div>
+    <div class="selectLevel">
+      <p>Select your level:</p>
+      <div>
+        <input type="radio" id="easy" name="level" value="easy">Easy
+      </div>
+      <div>
+        <input type="radio" id="medium" name="level" value="medium">Medium
+      </div>
+      <div>
+        <input type="radio" id="endGame" name="level" value="endGame">End Game
+      </div>
+      <button id="levelBtn" class="newGameBtn">New Game</button> </button>
+    </div>
+  </div>
+  <div class="game hidePage" id="game">
+    <div class="header">
+      <h1 class="header-name">Avengers Memory Game!</h1>
+      <span id="missesTitle"><span class="misses">0</span> Missed Guesses</span>
       <button id="newGame" class="newGameBtn">New Game</button>
     </div>
-    <div id="game"></div>
     <div id="myModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>You have avenged the world!</p>
-          <button id="newGameModal" class="newGameBtn">New Game</button>
-        </div>
-      
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="modalText">You have avenged the world!</p>
+        <div id="missesTotalText">You Got <span id="missesTotal">0</span> Wrong Guesses</div>
+        <button id="newGameModal" class="newGameBtn">New Game</button>
       </div>
+
+    </div>
   </div>
 </body>
 
